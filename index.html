@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@400;600;700&
+family=Montserrat:wght@400;500;700&
+family=Roboto:wght@400;500;700&
+family=Open+Sans:wght@400;600;700&
+family=Lato:wght@400;700&
+family=Raleway:wght@400;600;700&
+family=Oswald:wght@400;500;700&
+family=Merriweather:wght@400;700&
+family=Playfair+Display:wght@400;600;700&
+family=Cormorant+Garamond:wght@400;600;700&
+family=Cinzel:wght@400;600;700&
+family=Bebas+Neue&
+family=Pacifico&
+family=Lobster&
+family=Dancing+Script:wght@400;700&
+family=Great+Vibes&
+display=swap" rel="stylesheet">
+
+<!-- icons -->
+ <link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* -------------------------------Nav bar & footer start------------------------------------------ */
+        body{
+            padding: 0;
+            height: 100%;
+            
+            background:linear-gradient(rgba(0, 0, 0, 0.7)), url(images/tasty-appetizing-baked-chicken-served-table-with-deco-closeup.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment:fixed;
+            background-position: left;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+
+            padding: 10px 40px;
+            box-sizing: border-box;
+
+            
+            border-bottom: 0.1px solid rgba(255, 213, 0, 0.2);
+            z-index: 1000;
+        }
+        .logo_space{
+            display: flex;
+            align-items: center;
+            
+        }
+        .logo{
+            width: 100px;
+            height: auto;
+            background-color: white;
+            border-radius: 50%;
+        
+
+       }
+       
+        .blue{
+            color: blue;
+        }
+        .orange{
+            color: orange;
+        }
+        .nav_links {
+            
+            list-style: none;
+            display: flex;
+            
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+    
+        }
+        .nav_links li a{
+           position: relative;
+            text-decoration: none;
+            color: white;
+            
+            padding: 10px;
+            gap: 10px;
+            
+            border-radius: 50px;
+            transition: background-color 0.5s ;
+            display: inline-block;
+            
+           font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            
+        }
+        .nav_links li a::after{
+            
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 0;
+            height: 2px;
+            background: gold;
+            transition: width .3s ease;
+        }
+        
+        .nav_links li a:hover{
+            color: gold;
+           
+        }
+        .nav_links li a:hover::after{
+            color: gold;
+            cursor: pointer;
+            width: 100%;
+            
+        }
+        
+        .nav_links li a.active{
+            color: gold;
+        }
+        .nav_links li a.active::after{ 
+            
+            width: 100%;
+       }
+
+       /*-------------------------------- footer start--------------------------------- */
+      footer{
+    background:#282828;
+    color:#fff;
+    padding:60px 70px 20px;
+    margin-top:200px;
+}
+
+.footer-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.footer-title h2{
+    color:orange;
+    font-size:42px;
+    margin:0;
+    font-family:Montserrat,sans-serif;
+}
+
+.footer-title p{
+    color:#ccc;
+    font-size:18px;
+    margin-top:10px;
+    letter-spacing:2px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:200px;
+}
+
+.footer-column h3{
+    color:white;
+    margin-bottom:25px;
+    font-size:26px;
+}
+
+.footer-column p{
+    color:#bfbfbf;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.hours{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.hours td{
+    color:#bfbfbf;
+    padding:10px 0;
+    border-bottom:1px solid #222;
+}
+
+.hours td:last-child{
+    text-align:right;
+}
+
+.footer-column i{
+    color:orange;
+    font-size:20px;
+    margin-right:10px;
+}
+
+.social-icons{
+    margin-top:30px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    background:#222;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    margin-right:12px;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:orange;
+    color:black;
+}
+
+
+.copyright{
+    text-align:center;
+    color:#888;
+    font-size:15px;
+}
+
+ /* -------------------------------Nav bar & footer end------------------------------------------ */
+
+      /* HERO */
+
+.hero{
+height:90vh;
+background:url(images/top-view-cooked-chicken-with-greens-inside-plate-dark-blue-desk-chicken-meat-dinner-meat.jpg) center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.overlay{
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+}
+
+.hero h1{
+font-size:80px;
+font-family:'Bebas Neue';
+letter-spacing:3px;
+margin-left: 800px;
+color: #ff6b00;
+margin-bottom: 0;
+}
+.hero h2{
+font-size:40px;
+font-family:'Bebas Neue';
+letter-spacing:3px;
+margin-left: 800px;
+color: #ff6b00;
+margin-top: 0;
+}
+.hero h1{
+font-size:80px;
+font-family:'Bebas Neue';
+letter-spacing:3px;
+margin-left: 800px;
+color: #ff6b00;
+}
+
+.hero p{
+width:700px;
+font-size:20px;
+margin:20px 0;
+margin-left: 800px;
+}
+
+.btn{
+padding:15px 35px;
+background:#ff6b00;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+margin-left: 800px;
+margin-top: 60px;
+
+}
+
+.btn:hover{
+background:white;
+color:#ff6b00;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:80px;
+gap:60px;
+
+}
+
+.about img{
+width:500px;
+border-radius:20px;
+}
+
+.about h2{
+font-size:45px;
+color:#ff6b00;
+margin-bottom:20px;
+}
+
+.about p{
+font-size:18px;
+line-height:32px;
+color: #fff;
+}
+
+/* SPECIAL */
+
+.special{
+padding:80px;
+background-color: #888;
+text-align:center;
+}
+
+.special h2{
+font-size:45px;
+margin-bottom:40px;
+color:#081b35;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:15px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h3{
+margin:15px 0;
+}
+
+.card p{
+color:#ff6b00;
+font-weight:bold;
+}
+
+/* FEATURES */
+
+.features{
+padding:80px;
+display:flex;
+justify-content:center;
+gap:40px;
+background:#081b35;
+}
+
+.box{
+background:white;
+padding:30px;
+width:220px;
+text-align:center;
+border-radius:15px;
+}
+
+.box h3{
+font-size:40px;
+color:#ff6b00;
+}
+
+.box p{
+margin-top:10px;
+}
+
+/* CONTACT */
+
+.contact-strip{
+display:flex;
+justify-content:space-around;
+background:#ff6b00;
+color:white;
+padding:20px;
+font-size:18px;
+}
+       
+    </style>
+</head>
+<body>
+    <!-- -------------------navbar start--------------------------->
+    <nav class="navbar">
+        <div class="logo_space">
+            <img class="logo" src="images/logo3.png" alt="Spice Heaven Logo">
+            
+        </div>
+        <ul class="nav_links">
+            <li><a href="index.html" class="active"> Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="menu.html">Menu </a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- -------------------navbar end--------------------------->
+    
+   <!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>SPICE HEAVEN</h1>
+<h2>Taste the HEAT</h1>
+
+<p>
+Authentic Non-Veg Restaurant serving delicious
+biryanis, grills and seafood for over
+33 years.
+</p>
+
+<a href="menu.html" class="btn">Explore Menu</a>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+<div class="about-image">
+
+<img src="images/restaurant.jpg">
+
+</div>
+
+<div class="about-content">
+
+<h2>About Us</h2>
+
+<p>
+
+Welcome to Spicy Heaven. We prepare every dish using
+fresh ingredients and traditional recipes.
+
+Our chefs bring over 33 years of experience in creating
+mouth-watering non-vegetarian delicacies.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= SPECIAL ================= -->
+
+<section class="special">
+
+<h2>Our Special Dishes</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/food2.jpg">
+<h3>Chicken Biryani</h3>
+<p>₹249</p>
+</div>
+
+<div class="card">
+<img src="images/food5.jpg">
+<h3>Grilled Chicken</h3>
+<p>₹299</p>
+</div>
+
+<div class="card">
+<img src="images/food6.jpg">
+<h3>Fish Fry</h3>
+<p>₹279</p>
+</div>
+
+<div class="card">
+<img src="images/food4.jpg">
+<h3>Chicken Burger</h3>
+<p>₹189</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<div class="box">
+
+<h3>33+</h3>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="box">
+
+<h3>25+</h3>
+
+<p>Expert Chefs</p>
+
+</div>
+
+<div class="box">
+
+<h3>100%</h3>
+
+<p>Fresh Ingredients</p>
+
+</div>
+<div class="box">
+
+<h3>50+</h3>
+
+<p>Signature Dishes</p>
+
+</div>
+
+<div class="box">
+
+<h3>25K+</h3>
+
+<p>Happy Customers</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT STRIP ================= -->
+
+<section class="contact-strip">
+
+<p>📍 Chennai</p>
+
+<p>📞 +91 12345 12345</p>
+
+<p>✉ spiceheaven@gmail.com</p>
+
+</section>
+    <!-- -------------------footer start--------------------------->
+   <footer>
+
+    <div class="footer-title">
+        <h2>Spice Heaven</h2>
+        <p>Taste the HEAT</p>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>About Us</h3>
+
+            <p>
+                Welcome to Spice Heaven, where every meal is crafted with
+                authentic spices, premium ingredients, and unforgettable
+                flavours.
+            </p>
+
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="footer-column">
+
+            <h3>Opening Hours</h3>
+
+            <table class="hours">
+                <tr><td>Monday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Tuesday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Wednesday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Thursday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Friday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Saturday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Sunday</td><td>09:00 - 22:00</td></tr>
+            </table>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p><i class='bx bxs-map'></i> Chennai, Tamil Nadu</p>
+
+            <p><i class='bx bxs-phone'></i> +91 12345 12345</p>
+
+            <p><i class='bx bxs-envelope'></i> spiceheaven@gmail.com</p>
+
+        </div>
+
+        
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        &copy; 2026 Spice Heaven. All Rights Reserved.
+    </p>
+</footer>
+<!-- -------------------footer end--------------------------->
+</body>
+</html>
