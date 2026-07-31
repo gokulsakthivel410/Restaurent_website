@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@400;600;700&
+family=Montserrat:wght@400;500;700&
+family=Roboto:wght@400;500;700&
+family=Open+Sans:wght@400;600;700&
+family=Lato:wght@400;700&
+family=Raleway:wght@400;600;700&
+family=Oswald:wght@400;500;700&
+family=Merriweather:wght@400;700&
+family=Playfair+Display:wght@400;600;700&
+family=Cormorant+Garamond:wght@400;600;700&
+family=Cinzel:wght@400;600;700&
+family=Bebas+Neue&
+family=Pacifico&
+family=Lobster&
+family=Dancing+Script:wght@400;700&
+family=Great+Vibes&
+display=swap" rel="stylesheet">
+
+<!-- icons -->
+ <link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* -------------------------------Nav bar & footer start------------------------------------------ */
+        body{
+            padding: 0;
+            height: 100%;
+            
+            background:linear-gradient(rgba(0, 0, 0, 0.3)), url(images/close-up-delicious-chicken-meal.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment:fixed;
+            background-position: left;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+
+            padding: 10px 40px;
+            box-sizing: border-box;
+
+            
+            border-bottom: 0.1px solid rgba(255, 213, 0, 0.2);
+            z-index: 1000;
+        }
+        .logo_space{
+            display: flex;
+            align-items: center;
+            
+        }
+        .logo{
+            width: 100px;
+            height: auto;
+            background-color: white;
+            border-radius: 50%;
+        
+
+       }
+       
+        .blue{
+            color: blue;
+        }
+        .orange{
+            color: orange;
+        }
+        .nav_links {
+            
+            list-style: none;
+            display: flex;
+            
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+    
+        }
+        .nav_links li a{
+           position: relative;
+            text-decoration: none;
+            color: white;
+            
+            padding: 10px;
+            gap: 10px;
+            
+            border-radius: 50px;
+            transition: background-color 0.5s ;
+            display: inline-block;
+            
+           font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            
+        }
+        .nav_links li a::after{
+            
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 0;
+            height: 2px;
+            background: gold;
+            transition: width .3s ease;
+        }
+        
+        .nav_links li a:hover{
+            color: gold;
+           
+        }
+        .nav_links li a:hover::after{
+            color: gold;
+            cursor: pointer;
+            width: 100%;
+            
+        }
+        
+        .nav_links li a.active{
+            color: gold;
+        }
+        .nav_links li a.active::after{ 
+            
+            width: 100%;
+       }
+
+       /*-------------------------------- footer start--------------------------------- */
+      footer{
+    background:#282828;
+    color:#fff;
+    padding:60px 70px 20px;
+    margin-top:200px;
+}
+
+.footer-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.footer-title h2{
+    color:orange;
+    font-size:42px;
+    margin:0;
+    font-family:Montserrat,sans-serif;
+}
+
+.footer-title p{
+    color:#ccc;
+    font-size:18px;
+    margin-top:10px;
+    letter-spacing:2px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:200px;
+}
+
+.footer-column h3{
+    color:white;
+    margin-bottom:25px;
+    font-size:26px;
+}
+
+.footer-column p{
+    color:#bfbfbf;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.hours{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.hours td{
+    color:#bfbfbf;
+    padding:10px 0;
+    border-bottom:1px solid #222;
+}
+
+.hours td:last-child{
+    text-align:right;
+}
+
+.footer-column i{
+    color:orange;
+    font-size:20px;
+    margin-right:10px;
+}
+
+.social-icons{
+    margin-top:30px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    background:#222;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    margin-right:12px;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:orange;
+    color:black;
+}
+
+
+.copyright{
+    text-align:center;
+    color:#888;
+    font-size:15px;
+}
+
+ /* -------------------------------Nav bar & footer end------------------------------------------ */
+
+
+/* Banner */
+
+.contact-banner{
+
+    height:350px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("images/spicy-grilled-kebab-skewer-with-vegetables-smoke.jpg") center/cover;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.contact-banner h1{
+    font-size:55px;
+    color:#ff8c00;
+   
+}
+
+.contact-banner p{
+    margin-top:15px;
+    font-size:22px;
+    color: #fff;
+}
+
+
+/* Main Contact */
+
+.contact-container{
+
+    width:90%;
+    margin:70px auto;
+
+    display:flex;
+    justify-content:space-between;
+    gap:50px;
+
+    flex-wrap:wrap;
+}
+
+
+/* Right */
+
+.contact-info{
+
+    flex:1;
+    min-width:320px;
+}
+
+.contact-info h2{
+
+    font-size:34px;
+    color:whitesmoke;
+    margin-bottom:20px;
+    text-align: center;
+    
+    
+}
+.contact-info h3{
+    
+    font-size:34px;
+    color:white;
+    margin-bottom:20px;
+    text-align: center;
+}
+
+.contact-info p{
+    
+    color:#ddd;
+    line-height:28px;
+    margin-bottom:30px;
+    text-align: center;
+}
+
+.info-box{
+    color: white;
+
+    background:#1a1a1a;
+    padding:20px;
+    margin-bottom:20px;
+    border-left:5px solid orange;
+    border-radius:8px;
+    line-height:28px;
+    transition:.4s;
+}
+
+.info-box:hover{
+
+    transform:translateX(8px);
+    background:#222;
+}
+
+
+/* Left */
+
+.contact-form{
+
+    flex:1;
+    min-width:350px;
+
+    
+    background:#1a1a1a;
+
+    padding:35px;
+
+    border-radius:12px;
+}
+
+.contact-form h2{
+
+    color:#ff8c00;
+    margin-bottom:25px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:none;
+
+    outline:none;
+
+    background:#2a2a2a;
+
+    color:white;
+
+    border-radius:6px;
+
+    font-size:16px;
+}
+
+.contact-form textarea{
+
+    resize:none;
+}
+
+.contact-form button{
+    margin-top: 50px;
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    background:orange;
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    border-radius:6px;
+
+    transition:.4s;
+}
+
+.contact-form button:hover{
+
+    background:#ff6200;
+
+    color:white;
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.contact-container{
+
+    flex-direction:column;
+}
+
+.contact-banner h1{
+
+    font-size:42px;
+}
+
+.contact-banner p{
+
+    font-size:18px;
+}
+
+}
+
+      
+    </style>
+</head>
+<body>
+    <!-- -------------------navbar start--------------------------->
+    <nav class="navbar">
+        <div class="logo_space">
+            <img class="logo" src="images/logo3.png" alt="Spice Heaven Logo">
+            
+        </div>
+        <ul class="nav_links">
+            <li><a href="index.html" > Home</a></li>
+            <li><a href="about.html" >About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="menu.html">Menu </a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- -------------------navbar end--------------------------->
+    
+    <!-- Contact Banner -->
+
+<section class="contact-banner">
+    <h1>Contact Us</h1>
+    <p>We'd Love to Hear From You!</p>
+</section>
+
+
+<!-- Contact Section -->
+
+<section class="contact-container">
+
+    
+    <!-- Left Side -->
+    
+    <div class="contact-form">
+        
+        <h2>Send a Message</h2>
+        
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+            
+            <input type="email" placeholder="Email Address" required>
+            
+            <input type="tel" placeholder="Phone Number">
+            
+            <textarea rows="6" placeholder="Your Message"></textarea>
+            
+            <button type="submit">Send Message</button>
+            
+        </form>
+
+    </div>
+    
+
+    
+    <!-- Right Side -->
+
+    <div class="contact-info">
+
+        <h2>Get In Touch</h2>
+        <h3>Feel Free To Contact</h3>
+
+        <p>
+            Have a question, feedback, or want to reserve a table?
+            Feel free to contact us anytime.
+        </p>
+
+        <div class="info-box">
+            📍 <strong>Address</strong><br>
+            123 Food Street,<br>
+            Chennai, Tamil Nadu - 600001
+        </div>
+
+        <div class="info-box">
+            📞 <strong>Phone</strong><br>
+            +91 12345 12345
+        </div>
+
+        <div class="info-box">
+            ✉️ <strong>Email</strong><br>
+            spiceheaven@gmail.com
+        </div>
+
+        <div class="info-box">
+            🕒 <strong>Opening Hours</strong><br>
+            Mon - Sun : 09:00 AM - 10:00 PM
+        </div>
+
+    </div>
+
+</section>
+    <!-- -------------------footer start--------------------------->
+    <footer>
+
+        <div class="footer-title">
+        <h2>Spice Heaven</h2>
+        <p>Taste the HEAT</p>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>About Us</h3>
+
+            <p>
+                Welcome to Spice Heaven, where every meal is crafted with
+                authentic spices, premium ingredients, and unforgettable
+                flavours.
+            </p>
+
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="footer-column">
+
+            <h3>Opening Hours</h3>
+
+            <table class="hours">
+                <tr><td>Monday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Tuesday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Wednesday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Thursday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Friday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Saturday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Sunday</td><td>09:00 - 22:00</td></tr>
+            </table>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p><i class='bx bxs-map'></i> Chennai, Tamil Nadu</p>
+
+            <p><i class='bx bxs-phone'></i> +91 12345 12345</p>
+
+            <p><i class='bx bxs-envelope'></i> spiceheaven@gmail.com</p>
+
+        </div>
+
+        
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        &copy; 2026 Spice Heaven. All Rights Reserved.
+    </p>
+</footer>
+<!-- -------------------footer end--------------------------->
+</body>
+</html>

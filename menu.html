@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@400;600;700&
+family=Montserrat:wght@400;500;700&
+family=Roboto:wght@400;500;700&
+family=Open+Sans:wght@400;600;700&
+family=Lato:wght@400;700&
+family=Raleway:wght@400;600;700&
+family=Oswald:wght@400;500;700&
+family=Merriweather:wght@400;700&
+family=Playfair+Display:wght@400;600;700&
+family=Cormorant+Garamond:wght@400;600;700&
+family=Cinzel:wght@400;600;700&
+family=Bebas+Neue&
+family=Pacifico&
+family=Lobster&
+family=Dancing+Script:wght@400;700&
+family=Great+Vibes&
+display=swap" rel="stylesheet">
+
+<!-- icons -->
+ <link ref="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* -------------------------------Nav bar & footer start------------------------------------------ */
+        body{
+            padding: 0;
+            height: 100%;
+            
+            background:linear-gradient(rgba(0, 0, 0, 0.3)), url(images/side-view-baked-chicken-with-cucumber-lemon-seasoning-bread-table.jpg);
+            
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment:fixed;
+            background-position: left;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+
+            padding: 10px 40px;
+            box-sizing: border-box;
+
+            
+            border-bottom: 0.1px solid rgba(255, 213, 0, 0.2);
+            z-index: 1000;
+        }
+        .logo_space{
+            display: flex;
+            align-items: center;
+            
+        }
+        .logo{
+            width: 100px;
+            height: auto;
+            background-color: white;
+            border-radius: 50%;
+        
+
+       }
+       
+        .blue{
+            color: blue;
+        }
+        .orange{
+            color: orange;
+        }
+        .nav_links {
+            
+            list-style: none;
+            display: flex;
+            
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+    
+        }
+        .nav_links li a{
+           position: relative;
+            text-decoration: none;
+            color: white;
+            
+            padding: 10px;
+            gap: 10px;
+            
+            border-radius: 50px;
+            transition: background-color 0.5s ;
+            display: inline-block;
+            
+           font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            
+        }
+        .nav_links li a::after{
+            
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 0;
+            height: 2px;
+            background: gold;
+            transition: width .3s ease;
+        }
+        
+        .nav_links li a:hover{
+            color: gold;
+           
+        }
+        .nav_links li a:hover::after{
+            color: gold;
+            cursor: pointer;
+            width: 100%;
+            
+        }
+        
+        .nav_links li a.active{
+            color: gold;
+        }
+        .nav_links li a.active::after{ 
+            
+            width: 100%;
+       }
+
+       /*-------------------------------- footer start--------------------------------- */
+      footer{
+    background:#282828;
+    color:#fff;
+    padding:60px 70px 20px;
+    margin-top:200px;
+    
+}
+
+.footer-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.footer-title h2{
+    color:orange;
+    font-size:42px;
+    margin:0;
+    font-family:Montserrat,sans-serif;
+}
+
+.footer-title p{
+    color:#ccc;
+    font-size:18px;
+    margin-top:10px;
+    letter-spacing:2px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:200px;
+}
+
+.footer-column h3{
+    color:white;
+    margin-bottom:25px;
+    font-size:26px;
+}
+
+.footer-column p{
+    color:#bfbfbf;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.hours{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.hours td{
+    color:#bfbfbf;
+    padding:10px 0;
+    border-bottom:1px solid #222;
+}
+
+.hours td:last-child{
+    text-align:right;
+}
+
+.footer-column i{
+    color:orange;
+    font-size:20px;
+    margin-right:10px;
+}
+
+.social-icons{
+    margin-top:30px;
+}
+
+.social-icons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    background:#222;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    margin-right:12px;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:orange;
+    color:black;
+}
+
+
+.copyright{
+    text-align:center;
+    color:#888;
+    font-size:15px;
+}
+
+ /* -------------------------------Nav bar & footer end------------------------------------------ */
+.hero{
+    height: 500px;
+    
+    margin-left: 0;
+    margin-top: 0;
+
+    
+
+
+    background:linear-gradient(rgba(0, 0, 0, 0.4)),url(images/tasty-appetizing-baked-chicken-served-table-with-deco-closeup.jpg);
+            
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment:scroll;
+     background-position: center;
+     
+
+}
+
+.space{
+    width:100%;
+    height:320px;
+    overflow:hidden;
+    background:none;      /* Remove white background */
+}
+
+.slider{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.slide-track{
+    display:flex;
+    height:100%;
+    width:max-content;
+    animation:scroll 25s linear infinite;
+}
+
+.slide-track img{
+    width:320px;          /* Increase if you want larger images */
+    height:100%;
+    object-fit:cover;
+    flex-shrink:0;
+
+    margin:0;
+    padding:0;
+    border:none;
+}
+
+/* Continuous movement */
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-2240px); /* 7 × 320px */
+    }
+}
+
+
+.menu-card{
+    width:90%;
+    max-width:1200px;
+    margin:120px auto;
+    padding:40px;
+    background:#282828;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+.menu-card .heading{
+
+    font-size: 30px;
+    color: orangered;
+    text-align: center;
+
+
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    padding:25px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.menu-item:last-child{
+    border-bottom:none;
+}
+
+.menu-item img{
+    width:220px;
+    height:150px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.food-details{
+    flex:1;
+}
+
+.food-details h2{
+    margin:0;
+    font-size:32px;
+    font-family:'Montserrat',sans-serif;
+    color:#ddd;
+}
+
+.food-details h3{
+    margin:10px 0;
+    color:orangered;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.food-details p{
+    margin:0;
+    color:#555;
+    font-size:18px;
+    line-height:1.6;
+    font-family:'Poppins',sans-serif;
+}
+
+        
+    </style>
+</head>
+<body>
+    <!-- -------------------navbar start--------------------------->
+    <nav class="navbar">
+        <div class="logo_space">
+            <img class="logo" src="images/logo3.png" alt="Spice Heaven Logo">
+            
+        </div>
+        <ul class="nav_links">
+            <li><a href="index.html" > Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="menu.html" class="active">Menu </a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- -------------------navbar end--------------------------->
+    <section class="hero"></section>
+<section class="space">
+    <div class="slider">
+        <div class="slide-track">
+
+            <!-- Original 7 images -->
+            <img src="images/food1.jpg">
+            <img src="images/food2.jpg">
+            <img src="images/food3.jpg">
+            <img src="images/food4.jpg">
+            <img src="images/food5.jpg">
+            <img src="images/food6.jpg">
+            <img src="images/food7.jpg">
+            
+            <!-- Duplicate them -->
+            <img src="images/food1.jpg">
+            <img src="images/food2.jpg">
+            <img src="images/food3.jpg">
+            <img src="images/food4.jpg">
+            <img src="images/food5.jpg">
+            <img src="images/food6.jpg">
+            <img src="images/food7.jpg">
+            
+        </div>
+    </div>
+</section>
+
+<section class="menu-card">
+    <h2 class="heading">OUR MENU</h2>
+
+    <div class="menu-item">
+        <img src="images/food1.jpg" alt="Chicken Biryani">
+
+        <div class="food-details">
+            <h2>Chicken Biryani</h2>
+            <h3>₹299</h3>
+            <p>Authentic dum biryani cooked with aromatic spices.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="images/gril.jpg" alt="Grilled Chicken">
+
+        <div class="food-details">
+            <h2>Grilled Chicken</h2>
+            <h3>₹349</h3>
+            <p>Juicy grilled chicken served with herbs and sauce.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="images/mutton.jpg" alt="Mutton Curry">
+
+        <div class="food-details">
+            <h2>Mutton Curry</h2>
+            <h3>₹399</h3>
+            <p>Slow-cooked mutton in rich traditional spices.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="images/food4.jpg" alt="Chicken 65">
+
+        <div class="food-details">
+            <h2>Chicken 65</h2>
+            <h3>₹249</h3>
+            <p>Crispy spicy chicken bites with authentic flavour.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="images/food5.jpg" alt="Fish Fry">
+
+        <div class="food-details">
+            <h2>Fish Fry</h2>
+            <h3>₹279</h3>
+            <p>Fresh fish marinated with special masala and fried.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="images/butter_chicken.jpg" alt="Butter Chicken">
+
+        <div class="food-details">
+            <h2>Butter Chicken</h2>
+            <h3>₹329</h3>
+            <p>Creamy tomato gravy with tender chicken pieces.</p>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="images/tandoori.jpg" alt="Tandoori Chicken">
+
+        <div class="food-details">
+            <h2>Tandoori Chicken</h2>
+            <h3>₹379</h3>
+            <p>Char-grilled chicken marinated in Indian spices.</p>
+        </div>
+    </div>
+
+</section>
+
+
+</section>
+
+
+    <!-- -------------------footer start--------------------------->
+   <footer>
+
+    <div class="footer-title">
+        <h2>Spice Heaven</h2>
+        <p>Taste the HEAT</p>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-column">
+            <h3>About Us</h3>
+
+            <p>
+                Welcome to Spice Heaven, where every meal is crafted with
+                authentic spices, premium ingredients, and unforgettable
+                flavours.
+            </p>
+
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="footer-column">
+
+            <h3>Opening Hours</h3>
+
+            <table class="hours">
+                <tr><td>Monday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Tuesday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Wednesday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Thursday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Friday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Saturday</td><td>09:00 - 22:00</td></tr>
+                <tr><td>Sunday</td><td>09:00 - 22:00</td></tr>
+            </table>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-column">
+
+            <h3>Contact Us</h3>
+
+            <p><i class='bx bxs-map'></i> Chennai, Tamil Nadu</p>
+
+            <p><i class='bx bxs-phone'></i> +91 12345 12345</p>
+
+            <p><i class='bx bxs-envelope'></i> spiceheaven@gmail.com</p>
+
+        </div>
+
+        
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        &copy; 2026 Spice Heaven. All Rights Reserved.
+    </p>
+</footer>
+<!-- -------------------footer end--------------------------->
+</body>
+</html>
